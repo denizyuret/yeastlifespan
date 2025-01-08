@@ -27,7 +27,7 @@ The CV values are not very trustworthy in this dataset because the means are cal
 
 **expression\_log\_fold\_changes:** In this file, the rows under the “DELETED\_GENE” column represent the deleted gene from the yeast genome (one gene is deleted at a time). We have around 1500 gene deletions in this manner. The columns, on the other hand, cover the genes of the entire yeast genome (6000+). The entries of this matrix: for a given entry (i, j), we have the expression log-fold change (LFC) that gene j encounters when gene i is deleted (the “change” is given relative to the wild-type). Put more simply, for a given row (meaning a single gene deletion), we have the expression change information for the rest of the genes in the yeast genome. For a deletion gene i, LFC is measured by: 
 
-LFC \=log expression of gene j under deletion iwildtype expression of gene j 
+LFC = log(expression of gene j under deletion i / wildtype expression of gene j)
 
 Note that this matrix is not square (1500 x 6400\) because the experimenters collcted data from only 1500 yeast strains when 1500 genes are deleted, one gene at a time. Overall, this dataset reveals expression dependencies between genes (in young cells as mentioned above).
 
