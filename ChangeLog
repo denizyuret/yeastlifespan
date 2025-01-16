@@ -1,3 +1,57 @@
+2025-01-16  Deniz Yuret  <dyuret@WS001>
+
+	* top10: Top 10 predictors by univariate R^2 score:
+	Predictor: YNL066W
+	Slope:     8.0718
+	Intercept: 25.2904
+	R^2:       0.0897
+
+	Predictor: YBR023C
+	Slope:     -12.2648
+	Intercept: 24.9256
+	R^2:       0.0748
+
+	Predictor: YHR209W
+	Slope:     -4.0524
+	Intercept: 25.3274
+	R^2:       0.0654
+
+	Predictor: YLR328W
+	Slope:     11.1336
+	Intercept: 25.2968
+	R^2:       0.0654
+
+	Predictor: YCL049C
+	Slope:     -6.9129
+	Intercept: 25.4058
+	R^2:       0.0651
+
+	Predictor: YBR009C
+	Slope:     8.1373
+	Intercept: 25.0073
+	R^2:       0.0632
+
+	Predictor: YKL163W
+	Slope:     -4.2786
+	Intercept: 25.2066
+	R^2:       0.0632
+
+	Predictor: YGL101W
+	Slope:     8.1879
+	Intercept: 25.2629
+	R^2:       0.0610
+
+	Predictor: YLR250W
+	Slope:     -10.6871
+	Intercept: 25.2749
+	R^2:       0.0610
+
+	Predictor: YHR143W
+	Slope:     5.7882
+	Intercept: 24.8472
+	R^2:       0.0610
+
+
 2025-01-08  dyuret  <dyuret@login03.kuacc.ku.edu.tr>
 
 	* notes:
