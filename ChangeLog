@@ -1,0 +1,12 @@
+2025-01-08  dyuret  <dyuret@login03.kuacc.ku.edu.tr>
+
+	* notes:
+	processed_lifespan_data, lifespan_mccormick_data connect deleted gene to lifespan.
+	expression_log_fold_changes connects deleted gene to expression levels.
+	interaction_strengths_of_yeastgenes shows interaction strength with what units?
+
+	* xls2jl.jl: read data in Julia.
+
+	* xls2pd.py: read data in Python.
+
+	* xls2tsv.py: convert data to tab-separated text format.
