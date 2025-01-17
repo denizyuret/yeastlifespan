@@ -1,3 +1,43 @@
+2025-01-17  Deniz Yuret  <dyuret@login01>
+
+	* expression2lifespan: Predicting processed_lifespan_data/weighted_mean from expression_log_fold_changes.
+	#             FeatureSet             Model        R2      RMSE       MAE
+	# 0       RF_Importances  GradientBoosting  0.229424  4.998699  3.961131
+	# 1       RF_Importances      RandomForest  0.217356  5.038114  4.000649
+	# 2   KBest_f_regression  GradientBoosting  0.183821  5.146341  4.066487
+	# 3   KBest_f_regression      RandomForest  0.166679  5.198773  4.115009
+	# 4       RF_Importances           SVR_RBF  0.160846  5.217942  4.091167
+	# 5       RF_Importances           XGBoost  0.156713  5.228334  4.135610
+	# 6   KBest_f_regression           SVR_RBF  0.132727  5.304975  4.172001
+	# 7   KBest_f_regression  LinearRegression  0.119903  5.346688  4.215753
+	# 8       RF_Importances               KNN  0.101321  5.395694  4.279819
+	# 9   KBest_f_regression           XGBoost  0.081626  5.455615  4.301017
+	# 10  KBest_f_regression               KNN  0.070692  5.490196  4.412893
+	# 11      RF_Importances  LinearRegression  0.063038  5.514078  4.299393
+	# 12  KBest_f_regression      MLPRegressor -0.453318  6.841595  5.083355
+	# 13      RF_Importances      MLPRegressor -0.891840  7.809812  5.600293
+
+	>>> X.columns[top_indices] # selected by RandomForest
+	Index(['YHR152W', 'YHR209W', 'YKL163W', 'YDR461W', 'YOL113W', 'YDL059C',
+	'YDR174W', 'YLR286C', 'YHR143W', 'YHR030C', 'YNL066W', 'YMR145C',
+	'YNL293W', 'YDL042C', 'YMR001C', 'YJR008W', 'YER124C', 'YOL149W',
+	'YGL089C', 'YNL145W', 'YGR161C', 'YDL049C', 'YLR307W', 'YDR371W',
+	'YML042W', 'YLR011W', 'YBR158W', 'YBR103W', 'YLR297W', 'YGR290W',
+	'YLR190W', 'YNL234W', 'YMR074C', 'YKL111C', 'YHR005C', 'YLR256W',
+	'YJL091C', 'YNL028W', 'YLR250W', 'YIL113W', 'YJR161C', 'YLR282C',
+	'YPL075W', 'YDR157W', 'YKR106W.1', 'YBR090C', 'YJL083W', 'YBR023C',
+	'YER059W', 'YLR152C', 'YHR212W-A', 'YHR185C', 'YNR048W', 'YMR251W',
+	'YLR131C', 'YJR004C', 'YHR202W', 'YBR067C', 'YOL072W', 'YLR448W',
+	'YGR185C', 'YLR243W', 'YGR193C', 'YMR075W', 'YOR330C', 'YKL094W',
+	'YCR033W', 'YPL244C', 'YHR131C', 'YLR070C', 'YOL020W', 'YIL053W',
+	'YJL186W', 'YGR041W', 'YBR010W', 'YBL098W', 'YOR050C', 'YIL015W',
+	'YDL185C-A', 'YGL098W', 'YGR032W', 'YIR043C', 'YNR055C', 'YFR044C',
+	'YOR059C', 'YOR090C', 'YCL022C', 'YER040W', 'YHR100C', 'YGR109W-B',
+	'YER128W', 'YOR209C', 'YLR420W', 'YBL031W', 'YBR066C', 'YPL165C',
+	'YBR005W', 'YIR028W', 'YHR021W-A', 'YNL107W'],
+	dtype='object')
+
+
 2025-01-16  Deniz Yuret  <dyuret@WS001>
 
 	* top10: Top 10 predictors by univariate R^2 score:
