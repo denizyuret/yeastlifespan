@@ -1,6 +1,61 @@
 2025-01-17  Deniz Yuret  <dyuret@login01>
 
-	* expression2lifespan: Predicting processed_lifespan_data/weighted_mean from expression_log_fold_changes.
+	* expression2lifespan2.py: Second version, written by chatgpt.
+	#                   FeatureSet             Model        R2      RMSE       MAE
+	# 0   RandomForest_Importances  GradientBoosting  0.229424  4.998699  3.961131
+	# 1   RandomForest_Importances      RandomForest  0.217356  5.038114  4.000649
+	# 2   RandomForest_Importances          LightGBM  0.202584  5.086460  4.049864
+	# 3   SelectKBest_f_regression  GradientBoosting  0.183821  5.146341  4.066487
+	# 4   SelectKBest_f_regression      RandomForest  0.166679  5.198773  4.115009
+	# 5   RandomForest_Importances           SVR_RBF  0.160846  5.217942  4.091167
+	# 6   RandomForest_Importances           XGBoost  0.156713  5.228334  4.135610
+	# 7   SelectKBest_f_regression        ElasticNet  0.138449  5.289959  4.186351
+	# 8   SelectKBest_f_regression           SVR_RBF  0.132727  5.304975  4.172001
+	# 9    SelectKBest_mutual_info      RandomForest  0.129373  5.317759  4.246467
+	# 10   SelectKBest_mutual_info  GradientBoosting  0.128465  5.317391  4.219763
+	# 11  SelectKBest_f_regression             Lasso  0.122386  5.339133  4.211854
+	# 12  SelectKBest_f_regression             Ridge  0.121772  5.341002  4.212893
+	# 13  SelectKBest_f_regression  LinearRegression  0.119903  5.346688  4.215753
+	# 14  SelectKBest_f_regression          LightGBM  0.118273  5.349008  4.212980
+	# 15   SelectKBest_mutual_info           SVR_RBF  0.117898  5.350566  4.211128
+	# 16           Lasso_Selection      RandomForest  0.114267  5.362041  4.254798
+	# 17           Lasso_Selection  GradientBoosting  0.112438  5.367061  4.259160
+	# 18  RandomForest_Importances               KNN  0.101321  5.395694  4.279819
+	# 19  RandomForest_Importances          CatBoost  0.101264  5.395450  4.260493
+	# 20   SelectKBest_mutual_info               KNN  0.095037  5.413534  4.286193
+	# 21   SelectKBest_mutual_info          LightGBM  0.090886  5.431109  4.324394
+	# 22  RandomForest_Importances        ElasticNet  0.088637  5.438359  4.261644
+	# 23           Lasso_Selection           SVR_RBF  0.088067  5.439587  4.270223
+	# 24           Lasso_Selection          LightGBM  0.084382  5.451791  4.335654
+	# 25  SelectKBest_f_regression           XGBoost  0.081626  5.455615  4.301017
+	# 26  SelectKBest_f_regression        SVR_Linear  0.080091  5.464984  4.298042
+	# 27  SelectKBest_f_regression               KNN  0.070692  5.490196  4.412893
+	# 28  RandomForest_Importances             Lasso  0.066875  5.502824  4.293649
+	# 29  RandomForest_Importances             Ridge  0.064964  5.508393  4.296833
+	# 30  RandomForest_Importances  LinearRegression  0.063038  5.514078  4.299393
+	# 31  SelectKBest_f_regression          CatBoost  0.052961  5.533034  4.370987
+	# 32   SelectKBest_mutual_info        ElasticNet  0.039506  5.583466  4.349184
+	# 33   SelectKBest_mutual_info        SVR_Linear  0.036511  5.595439  4.337690
+	# 34           Lasso_Selection               KNN  0.036503  5.584261  4.412217
+	# 35           Lasso_Selection           XGBoost  0.025694  5.619224  4.451017
+	# 36   SelectKBest_mutual_info             Lasso  0.019070  5.642156  4.386258
+	# 37   SelectKBest_mutual_info             Ridge  0.017661  5.646215  4.388758
+	# 38   SelectKBest_mutual_info  LinearRegression  0.015724  5.651720  4.392067
+	# 39  RandomForest_Importances        SVR_Linear  0.008619  5.666491  4.389504
+	# 40   SelectKBest_mutual_info           XGBoost -0.009256  5.722491  4.512829
+	# 41   SelectKBest_mutual_info          CatBoost -0.020839  5.752239  4.506470
+	# 42           Lasso_Selection          CatBoost -0.024875  5.767782  4.596251
+	# 43           Lasso_Selection        ElasticNet -0.040672  5.806355  4.437879
+	# 44           Lasso_Selection             Lasso -0.076718  5.903823  4.474887
+	# 45           Lasso_Selection             Ridge -0.078793  5.909432  4.477769
+	# 46           Lasso_Selection  LinearRegression -0.082143  5.918356  4.480985
+	# 47           Lasso_Selection        SVR_Linear -0.183198  6.187044  4.588824
+	# 48  SelectKBest_f_regression      MLPRegressor -0.388267  6.680344  5.040116
+	# 49   SelectKBest_mutual_info      MLPRegressor -0.938700  7.894375  5.751250
+	# 50  RandomForest_Importances      MLPRegressor -1.045688  8.106889  5.560205
+	# 51           Lasso_Selection      MLPRegressor -1.824152  9.542614  6.590434
+
+	* expression2lifespan.py: Predicting processed_lifespan_data/weighted_mean from expression_log_fold_changes. Written by chatgpt.
 	#             FeatureSet             Model        R2      RMSE       MAE
 	# 0       RF_Importances  GradientBoosting  0.229424  4.998699  3.961131
 	# 1       RF_Importances      RandomForest  0.217356  5.038114  4.000649
